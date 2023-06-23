@@ -7,7 +7,7 @@ class RadioChannelList {
       radioType: "KBS",
       radioFreq: "FM 97.3㎒",
       radioWebSlug:
-        "http://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=21#refresh",
+        "https://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=21#refresh",
       radioApiSlug:
         "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/21/",
       highlightColor: { value: "#eb3b5a" },
@@ -17,7 +17,7 @@ class RadioChannelList {
       radioType: "KBS",
       radioFreq: "FM 106.1㎒",
       radioWebSlug:
-        "http://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=22#refresh",
+        "https://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=22#refresh",
       radioApiSlug:
         "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/22/",
       highlightColor: { value: "#fa8231" },
@@ -27,7 +27,7 @@ class RadioChannelList {
       radioType: "KBS",
       radioFreq: "FM 93.1㎒",
       radioWebSlug:
-        "http://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=24#refresh",
+        "https://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=24#refresh",
       radioApiSlug:
         "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/24/",
       highlightColor: { value: "#f7b731" },
@@ -37,7 +37,7 @@ class RadioChannelList {
       radioType: "KBS",
       radioFreq: "FM 89.1㎒",
       radioWebSlug:
-        "http://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=25#refresh",
+        "https://onair.kbs.co.kr/index.html?sname=onair&stype=live&ch_code=25#refresh",
       radioApiSlug:
         "https://cfpwwwapi.kbs.co.kr/api/v1/landing/live/channel_code/25/",
       highlightColor: { value: "#20bf6b" },
@@ -46,7 +46,7 @@ class RadioChannelList {
       radioChannelTitle: "MBC 라디오",
       radioType: "MBC",
       radioFreq: "FM 95.9㎒",
-      radioWebSlug: "http://mini.imbc.com/webapp_v3/mini.html?channel=sfm",
+      radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=sfm",
       radioApiSlug:
         "https://cb05-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=sfm",
       highlightColor: { value: "#00b061" },
@@ -55,7 +55,7 @@ class RadioChannelList {
       radioChannelTitle: "MBC FM4U",
       radioType: "MBC",
       radioFreq: "FM 91.9㎒",
-      radioWebSlug: "http://mini.imbc.com/webapp_v3/mini.html?channel=mfm",
+      radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=mfm",
       radioApiSlug:
         "https://cb05-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=mfm",
       highlightColor: { value: "#0fb9b1" },
@@ -64,27 +64,27 @@ class RadioChannelList {
       radioChannelTitle: "SBS 러브FM",
       radioType: "SBS",
       radioFreq: "FM 103.5㎒",
-      radioWebSlug: "http://play.sbs.co.kr/onair/pc/index.html?id=S08",
+      radioWebSlug: "https://play.sbs.co.kr/onair/pc/index.html?id=S08",
       radioApiSlug:
-        "http://apis.sbs.co.kr/play-api/1.0/onair/channel/S08?protocol=hls",
+        "https://apis.sbs.co.kr/play-api/1.0/onair/channel/S08?protocol=hls",
       highlightColor: { value: "#2d98da" },
     },
     {
       radioChannelTitle: "SBS 파워FM",
       radioType: "SBS",
       radioFreq: "FM 107.7㎒",
-      radioWebSlug: "http://play.sbs.co.kr/onair/pc/index.html?id=S07",
+      radioWebSlug: "https://play.sbs.co.kr/onair/pc/index.html?id=S07",
       radioApiSlug:
-        "http://apis.sbs.co.kr/play-api/1.0/onair/channel/S07?protocol=hls",
+        "https://apis.sbs.co.kr/play-api/1.0/onair/channel/S07?protocol=hls",
       highlightColor: { value: "#3867d6" },
     },
     {
       radioChannelTitle: "CBS 음악FM",
       radioType: "CBS",
       radioFreq: "FM 93.9㎒",
-      radioWebSlug: "http://www.cbs.co.kr/radio/frame/AodJwPlayer.asp#refresh",
+      radioWebSlug: "https://www.cbs.co.kr/radio/frame/AodJwPlayer.asp#refresh",
       radioHlsSlug:
-        "http://aac.cbs.co.kr/cbs939/definst/cbs939.stream/playlist.m3u8",
+        "https://aac.cbs.co.kr/cbs939/definst/cbs939.stream/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#8854d0" },
     },
@@ -92,9 +92,9 @@ class RadioChannelList {
       radioChannelTitle: "CBS 표준FM",
       radioType: "CBS",
       radioFreq: "FM 98.1㎒",
-      radioWebSlug: "http://www.cbs.co.kr/radio/frame/AodJwPlayer.asp",
+      radioWebSlug: "https://www.cbs.co.kr/radio/frame/AodJwPlayer.asp",
       radioHlsSlug:
-        "http://aac.cbs.co.kr/cbs981/definst/cbs981.stream/playlist.m3u8",
+        "https://aac.cbs.co.kr/cbs981/definst/cbs981.stream/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#4a3a95" },
     },
@@ -103,7 +103,7 @@ class RadioChannelList {
       radioType: "TBS",
       radioFreq: "FM 95.1㎒",
       radioWebSlug:
-        "https://cb05-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
+        "http://cb05-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
       radioHlsSlug: "http://58.234.158.60:1935/fmlive/myStream/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#4b6584" },
@@ -112,9 +112,9 @@ class RadioChannelList {
       radioChannelTitle: "EBS FM 교육방송",
       radioType: "EBS",
       radioFreq: "FM 104.5㎒",
-      radioWebSlug: "http://www.ebs.co.kr/radio/home?mainTop",
+      radioWebSlug: "https://www.ebs.co.kr/radio/home?mainTop",
       radioHlsSlug:
-        "http://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8",
+        "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#394454" },
     },

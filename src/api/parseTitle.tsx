@@ -20,7 +20,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
       //   "http://static.api.kbs.co.kr/mediafactory/v1/schedule/onair_now?rtype=jsonp&channel_code=21,22,24,25&local_station_code=00&callback=getChannelInfoList"
       // );
       response = await axios.get(
-        "http://static.api.kbs.co.kr/mediafactory/v1/schedule/onair_now?rtype=jsonp&channel_code=21,22,24,25&local_station_code=00&callback=getChannelInfoList"
+        "https://static.api.kbs.co.kr/mediafactory/v1/schedule/onair_now?rtype=jsonp&channel_code=21,22,24,25&local_station_code=00&callback=getChannelInfoList"
       );
 
       if (response.status === 200) {
@@ -40,8 +40,8 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
     case "MBC":
       const url =
         RadioChannelList.radioList.indexOf(radio) === 4
-          ? "http://control.imbc.com/Schedule/Radio/Time?sType=FM"
-          : "http://control.imbc.com/Schedule/Radio/Time?sType=FM4U";
+          ? "https://control.imbc.com/Schedule/Radio/Time?sType=FM"
+          : "https://control.imbc.com/Schedule/Radio/Time?sType=FM4U";
       response = await axios.get(url);
       // console.log(response);
 
@@ -52,8 +52,8 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
     case "CBS":
       const cbsUrl =
         RadioChannelList.radioList.indexOf(radio) === 8
-          ? "https://cb05-1-225-65-39.ngrok-free.app/http://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=2"
-          : "https://cb05-1-225-65-39.ngrok-free.app/http://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=4";
+          ? "https://cb05-1-225-65-39.ngrok-free.app/https://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=2"
+          : "https://cb05-1-225-65-39.ngrok-free.app/https://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=4";
       response = await axios.get(cbsUrl, {
         headers: {
           "ngrok-skip-browser-warning": "any",
