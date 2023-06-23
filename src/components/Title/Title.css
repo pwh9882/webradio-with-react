@@ -1,0 +1,35 @@
+.TitleBox {
+   flex-grow: 2;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   position: relative
+}
+.radio-title{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+}
+
+.radio-infos{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    /* flex-grow: 1; */
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 10px;
+    /* width: 100; */
+    width: 100%;
+    /* background-color: tomato; */
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 18px;
+}

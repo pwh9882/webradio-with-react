@@ -1,0 +1,25 @@
+.RadioList{
+    flex-grow: 2;
+    background-color: grey;
+    overflow: scroll;
+    height: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.radioChannel{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.react-ripples{
+    height: 50px;
+    width: 100%;
+}
