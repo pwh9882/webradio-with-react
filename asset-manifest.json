@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/webradio-with-react/static/css/main.89541782.css",
-    "main.js": "/webradio-with-react/static/js/main.c893a7a9.js",
+    "main.js": "/webradio-with-react/static/js/main.61433a19.js",
     "static/media/title.png": "/webradio-with-react/static/media/title.9cd584c2a0601c3a223b.png",
     "static/media/play.png": "/webradio-with-react/static/media/play.6a1c956cbdd1ed072556.png",
     "index.html": "/webradio-with-react/index.html",
     "main.89541782.css.map": "/webradio-with-react/static/css/main.89541782.css.map",
-    "main.c893a7a9.js.map": "/webradio-with-react/static/js/main.c893a7a9.js.map"
+    "main.61433a19.js.map": "/webradio-with-react/static/js/main.61433a19.js.map"
   },
   "entrypoints": [
     "static/css/main.89541782.css",
-    "static/js/main.c893a7a9.js"
+    "static/js/main.61433a19.js"
   ]
 }
