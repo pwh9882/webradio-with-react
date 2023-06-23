@@ -5,6 +5,448 @@
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
+    <script
+      src="https://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"
+      type="text/javascript"
+    ></script>
+    <!-- <script src="/src/api/ajax.js" type="text/javascript"></script> -->
+    <script>
+      Type.registerNamespace("CBSM.WSDL");
+      CBSM.WSDL.CBSMService = function () {
+        CBSM.WSDL.CBSMService.initializeBase(this);
+        this._timeout = 0;
+        this._userContext = null;
+        this._succeeded = null;
+        this._failed = null;
+      };
+      CBSM.WSDL.CBSMService.prototype = {
+        _get_path: function () {
+          var p = this.get_path();
+          if (p) return p;
+          else return CBSM.WSDL.CBSMService._staticInstance.get_path();
+        },
+        GetPgmIntro: function (
+          pgm,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "GetPgmIntro",
+            false,
+            {
+              pgm: pgm,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        CheckPgm: function (
+          pgm,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "CheckPgm",
+            false,
+            {
+              pgm: pgm,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        GetShortcutList: function (
+          pgm,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "GetShortcutList",
+            false,
+            {
+              pgm: pgm,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        GetHelloList: function (
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "GetHelloList",
+            false,
+            {},
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        FindPgmList: function (
+          val,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "FindPgmList",
+            false,
+            {
+              val: val,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        BindTimeTableList: function (
+          gubun,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "BindTimeTableList",
+            false,
+            {
+              gubun: gubun,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        BindDayTimeTable: function (
+          gubun,
+          day,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "BindDayTimeTable",
+            false,
+            {
+              gubun: gubun,
+              day: day,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        BindDayTvTimeTable: function (
+          day,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "BindDayTvTimeTable",
+            false,
+            {
+              day: day,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        BindOnairList: function (
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "BindOnairList",
+            false,
+            {},
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        BindNewBookList: function (
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "BindNewBookList",
+            false,
+            {},
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+        IntroduceRainbowAppEventSave: function (
+          data,
+          succeededCallback,
+          failedCallback,
+          userContext
+        ) {
+          return this._invoke(
+            this._get_path(),
+            "IntroduceRainbowAppEventSave",
+            false,
+            {
+              data: data,
+            },
+            succeededCallback,
+            failedCallback,
+            userContext
+          );
+        },
+      };
+      CBSM.WSDL.CBSMService.registerClass(
+        "CBSM.WSDL.CBSMService",
+        Sys.Net.WebServiceProxy
+      );
+      CBSM.WSDL.CBSMService._staticInstance = new CBSM.WSDL.CBSMService();
+      CBSM.WSDL.CBSMService.set_path = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_path(value);
+      };
+      CBSM.WSDL.CBSMService.get_path = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_path();
+      };
+      CBSM.WSDL.CBSMService.set_timeout = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_timeout(value);
+      };
+      CBSM.WSDL.CBSMService.get_timeout = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_timeout();
+      };
+      CBSM.WSDL.CBSMService.set_defaultUserContext = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_defaultUserContext(value);
+      };
+      CBSM.WSDL.CBSMService.get_defaultUserContext = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_defaultUserContext();
+      };
+      CBSM.WSDL.CBSMService.set_defaultSucceededCallback = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_defaultSucceededCallback(
+          value
+        );
+      };
+      CBSM.WSDL.CBSMService.get_defaultSucceededCallback = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_defaultSucceededCallback();
+      };
+      CBSM.WSDL.CBSMService.set_defaultFailedCallback = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_defaultFailedCallback(value);
+      };
+      CBSM.WSDL.CBSMService.get_defaultFailedCallback = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_defaultFailedCallback();
+      };
+      CBSM.WSDL.CBSMService.set_enableJsonp = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_enableJsonp(value);
+      };
+      CBSM.WSDL.CBSMService.get_enableJsonp = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_enableJsonp();
+      };
+      CBSM.WSDL.CBSMService.set_jsonpCallbackParameter = function (value) {
+        CBSM.WSDL.CBSMService._staticInstance.set_jsonpCallbackParameter(value);
+      };
+      CBSM.WSDL.CBSMService.get_jsonpCallbackParameter = function () {
+        return CBSM.WSDL.CBSMService._staticInstance.get_jsonpCallbackParameter();
+      };
+      CBSM.WSDL.CBSMService.set_path(
+        "https://cb05-1-225-65-39.ngrok-free.app/http://m.cbs.co.kr/wsdl/cbsmservice.asmx"
+      );
+      CBSM.WSDL.CBSMService.GetPgmIntro = function (
+        pgm,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.GetPgmIntro(
+          pgm,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.CheckPgm = function (
+        pgm,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.CheckPgm(
+          pgm,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.GetShortcutList = function (
+        pgm,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.GetShortcutList(
+          pgm,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.GetHelloList = function (
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.GetHelloList(
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.FindPgmList = function (
+        val,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.FindPgmList(
+          val,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.BindTimeTableList = function (
+        gubun,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.BindTimeTableList(
+          gubun,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.BindDayTimeTable = function (
+        gubun,
+        day,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.BindDayTimeTable(
+          gubun,
+          day,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.BindDayTvTimeTable = function (
+        day,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.BindDayTvTimeTable(
+          day,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.BindOnairList = function (
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.BindOnairList(
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.BindNewBookList = function (
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.BindNewBookList(
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      CBSM.WSDL.CBSMService.IntroduceRainbowAppEventSave = function (
+        data,
+        onSuccess,
+        onFailed,
+        userContext
+      ) {
+        CBSM.WSDL.CBSMService._staticInstance.IntroduceRainbowAppEventSave(
+          data,
+          onSuccess,
+          onFailed,
+          userContext
+        );
+      };
+      var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+      Type.registerNamespace("CBSM.Models");
+      if (typeof CBSM.Models.PgmIntro === "undefined") {
+        CBSM.Models.PgmIntro = gtc("CBSM.Models.PgmIntro");
+        CBSM.Models.PgmIntro.registerClass("CBSM.Models.PgmIntro");
+      }
+      if (typeof CBSM.Models.ShortcutInfo === "undefined") {
+        CBSM.Models.ShortcutInfo = gtc("CBSM.Models.ShortcutInfo");
+        CBSM.Models.ShortcutInfo.registerClass("CBSM.Models.ShortcutInfo");
+      }
+      Type.registerNamespace("Hello.Models");
+      if (typeof Hello.Models.HelloInfo === "undefined") {
+        Hello.Models.HelloInfo = gtc("Hello.Models.HelloInfo");
+        Hello.Models.HelloInfo.registerClass("Hello.Models.HelloInfo");
+      }
+      if (typeof CBSM.Models.TimeTable === "undefined") {
+        CBSM.Models.TimeTable = gtc("CBSM.Models.TimeTable");
+        CBSM.Models.TimeTable.registerClass("CBSM.Models.TimeTable");
+      }
+      Type.registerNamespace("CBSBook.Models");
+      if (typeof CBSBook.Models.BookInfo === "undefined") {
+        CBSBook.Models.BookInfo = gtc("CBSBook.Models.BookInfo");
+        CBSBook.Models.BookInfo.registerClass("CBSBook.Models.BookInfo");
+      }
+      Type.registerNamespace("CBSi.Biz.Events.Rainbow");
+      if (typeof CBSi.Biz.Events.Rainbow.IntroduceApp === "undefined") {
+        CBSi.Biz.Events.Rainbow.IntroduceApp = gtc(
+          "CBSi.Biz.Events.Rainbow.IntroduceApp"
+        );
+        CBSi.Biz.Events.Rainbow.IntroduceApp.registerClass(
+          "CBSi.Biz.Events.Rainbow.IntroduceApp"
+        );
+      }
+      Type.registerNamespace("Helper");
+      if (typeof Helper.ResultCode === "undefined") {
+        Helper.ResultCode = gtc("Helper.ResultCode");
+        Helper.ResultCode.registerClass("Helper.ResultCode");
+      }
+    </script>
 
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />

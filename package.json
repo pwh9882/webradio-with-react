@@ -14,6 +14,7 @@
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-player": "^2.12.0",
     "react-ripples": "^2.2.1",
     "react-scripts": "5.0.1",
@@ -46,5 +47,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://pwh9882.github.io/webradio-with-react"
+  "homepage": "https://pwh9882.github.io/webradio-with-react",
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.6"
+  }
 }

@@ -104,7 +104,9 @@ class RadioChannelList {
       radioFreq: "FM 95.1㎒",
       radioWebSlug:
         "http://cb05-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
-      radioHlsSlug: "http://58.234.158.60:1935/fmlive/myStream/playlist.m3u8",
+      radioHlsSlug:
+        "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/playlist.m3u8",
+
       radioApiSlug: null,
       highlightColor: { value: "#4b6584" },
     },

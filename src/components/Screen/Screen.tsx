@@ -22,7 +22,7 @@ const Screen = () => {
   const onPlayClick = async () => {
     if (urlForPlayer === "") {
       await loadHlsSlug();
-      console.log(selectedRadioHlsSlug);
+
       setUrlForPlayer(selectedRadioHlsSlug);
     } else {
       setUrlForPlayer("");
@@ -87,6 +87,7 @@ const Screen = () => {
   }, [radioChannelIndex]);
 
   useEffect(() => {
+    // console.log(selectedRadioHlsSlug);
     setUrlForPlayer(selectedRadioHlsSlug);
   }, [selectedRadioHlsSlug]);
 

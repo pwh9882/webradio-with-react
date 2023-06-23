@@ -3,6 +3,8 @@ import "./Title.css";
 import { parseTitle } from "api/parseTitle";
 import { useEffect, useState } from "react";
 import RadioChannel from "model/radioChannel";
+import React from "react";
+import { Helmet } from "react-helmet";
 
 interface Props {
   radioChannelIndex: number;
@@ -10,12 +12,28 @@ interface Props {
 }
 
 const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
-  const [radioProgramTitle, setRadioProgramTitle] = useState("선택하세요");
+  const [radioProgramTitle, setRadioProgramTitle] =
+    useState("선택하세요\n버전 0.9.0");
 
   const loadTitle = async () => {
-    var titletext = await parseTitle(currentChen!);
-    setRadioProgramTitle(titletext);
-    console.log(titletext);
+    try {
+      if (currentChen.radioType === "CBS") {
+        await CBSM.WSDL.CBSMService.BindOnairList(async (data: any) => {
+          // console.log(data);
+          let res =
+            RadioChannelList.radioList.indexOf(currentChen) === 8
+              ? data[2]["Name"]
+              : data[1]["Name"];
+          setRadioProgramTitle(res);
+        });
+      } else {
+        var titletext = await parseTitle(currentChen!);
+        setRadioProgramTitle(titletext);
+        // console.log(titletext);
+      }
+    } catch (error) {
+      setRadioProgramTitle("제목 로딩 실패");
+    }
   };
 
   useEffect(() => {
@@ -47,6 +65,13 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
       }}
     >
       {/* <img src={require("imgs/title.png")} alt="예시 이미지" /> */}
+      <Helmet>
+        <title>
+          {currentChen
+            ? `${radioProgramTitle} - ${currentChen.radioChannelTitle}`
+            : "webRadio"}
+        </title>
+      </Helmet>
 
       <div className="radio-title">{radioProgramTitle}</div>
       <div className="radio-infos">

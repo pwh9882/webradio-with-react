@@ -1,6 +1,7 @@
 import axios from "axios";
 import RadioChannel from "model/radioChannel";
 import RadioChannelList from "model/radioList";
+// import CBSMService from "../../ajax";
 
 export async function parseTitle(radio: RadioChannel): Promise<string> {
   let titleText = "리스트에서 선택해주세요";
@@ -50,6 +51,26 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
       break;
 
     case "CBS":
+      let d;
+      const temp = async (data: any) => {
+        d = data;
+      };
+      await CBSM.WSDL.CBSMService.BindOnairList(async (data: any) => {
+        // console.log(data);
+        let res =
+          RadioChannelList.radioList.indexOf(radio) === 8
+            ? data[2]["Name"]
+            : data[1]["Name"];
+        console.log(res);
+        await temp(res);
+        titleText = res;
+      });
+
+      // CBSMService.BindOnairList((data: any) => {
+      //   console.log(data);
+      // });
+      // console.log(1);
+      /*
       const cbsUrl =
         RadioChannelList.radioList.indexOf(radio) === 8
           ? "https://cb05-1-225-65-39.ngrok-free.app/https://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=2"
@@ -58,8 +79,12 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
         headers: {
           "ngrok-skip-browser-warning": "any",
           // "Content-Type": "text/html; Charset=ks_c_5601-1987"
+          // "User-Agent":
+          //   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
         },
       });
+      console.log(response.data);
+
       const aspText = response.data; // Buffer.from(response.data, "binary").toString("cp949");
       const arrTimeTable: TimeTableFromTBS[] = [];
 
@@ -95,6 +120,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
           break;
         }
       }
+      */
       break;
 
     case "TBS":
