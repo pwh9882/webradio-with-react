@@ -13,7 +13,7 @@ interface Props {
 
 const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
   const [radioProgramTitle, setRadioProgramTitle] =
-    useState("선택하세요\n버전 0.9.0");
+    useState("선택하세요 (버전 0.9.6)");
 
   const loadTitle = async () => {
     try {
@@ -75,7 +75,12 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
 
       <div className="radio-title">{radioProgramTitle}</div>
       <div className="radio-infos">
-        <div className="radio-station">
+        <div
+          className="radio-station"
+          style={{
+            color: currentChen ? currentChen.highlightColor.value : "aliceblue",
+          }}
+        >
           {currentChen ? currentChen.radioChannelTitle : "방송국"}
         </div>
         <div className="radio-freq">
