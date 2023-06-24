@@ -75,15 +75,15 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
 
       <div className="radio-title">{radioProgramTitle}</div>
       <div className="radio-infos">
+        <div className="radio-station">
+          {currentChen ? currentChen.radioChannelTitle : "방송국"}
+        </div>
         <div
-          className="radio-station"
+          className="radio-freq"
           style={{
             color: currentChen ? currentChen.highlightColor.value : "aliceblue",
           }}
         >
-          {currentChen ? currentChen.radioChannelTitle : "방송국"}
-        </div>
-        <div className="radio-freq">
           {currentChen ? currentChen.radioFreq : "주파수"}
         </div>
       </div>
