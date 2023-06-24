@@ -13,7 +13,7 @@ interface Props {
 
 const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
   const [radioProgramTitle, setRadioProgramTitle] =
-    useState("선택하세요 (버전 0.9.6)");
+    useState("리스트에서 선택하세요");
 
   const loadTitle = async () => {
     try {
@@ -69,7 +69,7 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
         <title>
           {currentChen
             ? `${radioProgramTitle} - ${currentChen.radioChannelTitle}`
-            : "webRadio"}
+            : "webRadio Version 1.0.1"}
         </title>
       </Helmet>
 
