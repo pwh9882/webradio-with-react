@@ -58,7 +58,7 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
     <div
       className="TitleBox"
       style={{
-        background: `rgba(0,0,0,0.45) url(${require("imgs/title.png")})`,
+        background: `rgba(0,0,0,0.45) url(${require("imgs/title2.jpeg")})`,
         backgroundBlendMode: "darken",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
