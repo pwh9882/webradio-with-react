@@ -5,7 +5,14 @@
     height: 0px;
     display: flex;
     flex-direction: column;
+
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
 }
+
+.RadioList::-webkit-scrollbar {
+    display: none;
+  }
 
 .radioChannel{
     height: 50px;

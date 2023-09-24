@@ -58,10 +58,11 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
     <div
       className="TitleBox"
       style={{
-        background: `rgba(0,0,0,0.4) url(${require("imgs/title.png")})`,
+        background: `rgba(0,0,0,0.45) url(${require("imgs/title.png")})`,
         backgroundBlendMode: "darken",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
       {/* <img src={require("imgs/title.png")} alt="예시 이미지" /> */}
@@ -69,7 +70,7 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
         <title>
           {currentChen
             ? `${radioProgramTitle} - ${currentChen.radioChannelTitle}`
-            : "webRadio Version 1.0.1"}
+            : "webRadio Version 1.0.6"}
         </title>
       </Helmet>
 

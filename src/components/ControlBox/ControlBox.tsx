@@ -11,11 +11,11 @@ const ControlBox = ({ onPlayClick, isPlaying }: Props) => {
     <div
       className="ControlBox"
       style={{
-        background: `rgba(0,0,0,0.4) url(${require("imgs/play.png")})`,
+        background: `rgba(0,0,0,0.45) url(${require("imgs/play5.png")})`,
         backgroundBlendMode: "darken",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        backgroundSize: "",
+        backgroundSize: "cover",
       }}
     >
       <Ripples
