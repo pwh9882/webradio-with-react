@@ -48,7 +48,7 @@ class RadioChannelList {
       radioFreq: "FM 95.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=sfm",
       radioApiSlug:
-        "https://cb05-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=sfm",
+        "https://cd3f-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=sfm",
       highlightColor: { value: "#00b061" },
     },
     {
@@ -57,7 +57,7 @@ class RadioChannelList {
       radioFreq: "FM 91.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=mfm",
       radioApiSlug:
-        "https://cb05-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=mfm",
+        "https://cd3f-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=mfm",
       highlightColor: { value: "#0fb9b1" },
     },
     {
@@ -103,7 +103,7 @@ class RadioChannelList {
       radioType: "TBS",
       radioFreq: "FM 95.1㎒",
       radioWebSlug:
-        "http://cb05-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
+        "https://cd3f-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
       radioHlsSlug:
         "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/playlist.m3u8",
 

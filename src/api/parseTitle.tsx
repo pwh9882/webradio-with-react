@@ -143,7 +143,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
 
     case "EBS":
       response = await axios.get(
-        "https://cb05-1-225-65-39.ngrok-free.app/https://www.ebs.co.kr/onair/cururentOnair.json?channelCd=RADIO",
+        "https://cd3f-1-225-65-39.ngrok-free.app/https://www.ebs.co.kr/onair/cururentOnair.json?channelCd=RADIO",
         {
           headers: {
             "ngrok-skip-browser-warning": "any",
