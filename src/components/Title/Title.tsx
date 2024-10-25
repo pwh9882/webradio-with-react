@@ -17,20 +17,8 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
 
   const loadTitle = async () => {
     try {
-      if (currentChen.radioType === "CBS") {
-        await CBSM.WSDL.CBSMService.BindOnairList(async (data: any) => {
-          // console.log(data);
-          let res =
-            RadioChannelList.radioList.indexOf(currentChen) === 8
-              ? data[2]["Name"]
-              : data[1]["Name"];
-          setRadioProgramTitle(res);
-        });
-      } else {
-        var titletext = await parseTitle(currentChen!);
-        setRadioProgramTitle(titletext);
-        // console.log(titletext);
-      }
+      var titletext = await parseTitle(currentChen!);
+      setRadioProgramTitle(titletext);
     } catch (error) {
       setRadioProgramTitle("제목 로딩 실패");
     }
@@ -70,7 +58,7 @@ const TitleBox = ({ radioChannelIndex, currentChen }: Props) => {
         <title>
           {currentChen
             ? `${radioProgramTitle} - ${currentChen.radioChannelTitle}`
-            : "webRadio Version 1.0.6"}
+            : "webRadio Version 1.0.7"}
         </title>
       </Helmet>
 

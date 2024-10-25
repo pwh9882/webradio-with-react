@@ -1,4 +1,6 @@
 import axios from "axios";
+import { load } from "cheerio";
+
 import RadioChannel from "model/radioChannel";
 import RadioChannelList from "model/radioList";
 // import CBSMService from "../../ajax";
@@ -6,6 +8,8 @@ import RadioChannelList from "model/radioList";
 export async function parseTitle(radio: RadioChannel): Promise<string> {
   let titleText = "리스트에서 선택해주세요";
   let response;
+  let url;
+  // console.log(radio.radioType);
 
   switch (radio.radioType) {
     case "SBS":
@@ -39,7 +43,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
       break;
 
     case "MBC":
-      const url =
+      url =
         RadioChannelList.radioList.indexOf(radio) === 4
           ? "https://control.imbc.com/Schedule/Radio/Time?sType=FM"
           : "https://control.imbc.com/Schedule/Radio/Time?sType=FM4U";
@@ -51,76 +55,15 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
       break;
 
     case "CBS":
-      let d;
-      const temp = async (data: any) => {
-        d = data;
-      };
-      await CBSM.WSDL.CBSMService.BindOnairList(async (data: any) => {
-        // console.log(data);
-        let res =
-          RadioChannelList.radioList.indexOf(radio) === 8
-            ? data[2]["Name"]
-            : data[1]["Name"];
-        console.log(res);
-        await temp(res);
-        titleText = res;
-      });
+      url = radio.radioWebSlug;
+      response = await axios.get(url);
 
-      // CBSMService.BindOnairList((data: any) => {
-      //   console.log(data);
-      // });
-      // console.log(1);
-      /*
-      const cbsUrl =
-        RadioChannelList.radioList.indexOf(radio) === 8
-          ? "https://cb05-1-225-65-39.ngrok-free.app/https://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=2"
-          : "https://cb05-1-225-65-39.ngrok-free.app/https://www.cbs.co.kr/cbsplayer/rainbow/widget/timetable.asp?ch=4";
-      response = await axios.get(cbsUrl, {
-        headers: {
-          "ngrok-skip-browser-warning": "any",
-          // "Content-Type": "text/html; Charset=ks_c_5601-1987"
-          // "User-Agent":
-          //   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
-        },
-      });
-      console.log(response.data);
+      // cheerio로 HTML 파싱
+      const $ = load(response.data);
 
-      const aspText = response.data; // Buffer.from(response.data, "binary").toString("cp949");
-      const arrTimeTable: TimeTableFromTBS[] = [];
+      // li.on의 자식 중 클래스가 program인 요소 텍스트 가져오기
+      titleText = $("li.on .program").text().trim();
 
-      const lines = aspText.trim().split("\n");
-
-      for (const line of lines) {
-        const item = line.split("\t");
-        arrTimeTable.push(
-          new TimeTableFromTBS(
-            item[0],
-            item[1],
-            item[2],
-            item[3],
-            item[4],
-            item[5],
-            item[6],
-            item[7],
-            item[8],
-            item[9],
-            item[10]
-          )
-        );
-      }
-
-      const curSec =
-        new Date().getHours() * 3600 +
-        new Date().getMinutes() * 60 +
-        new Date().getSeconds();
-
-      for (let i = arrTimeTable.length - 1; i >= 0; i--) {
-        if (parseInt(arrTimeTable[i].startTime!) < curSec) {
-          titleText = arrTimeTable[i].name!;
-          break;
-        }
-      }
-      */
       break;
 
     case "TBS":
@@ -143,15 +86,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
 
     case "EBS":
       response = await axios.get(
-        "https://cd3f-1-225-65-39.ngrok-free.app/https://www.ebs.co.kr/onair/cururentOnair.json?channelCd=RADIO",
-        {
-          headers: {
-            "ngrok-skip-browser-warning": "any",
-            // "Content-Type": "application/json;charset=UTF-8",
-            // "User-Agent":
-            //   "Mozilla/5.0 (Linux; U; Android 4.0.3; de-ch; HTC Sensation Build/IML74K) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
-          },
-        }
+        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.ebs.co.kr%2Fonair%2FcururentOnair.json%3FchannelCd%3DRADIO"
       );
 
       if (response.status === 200) {

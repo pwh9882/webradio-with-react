@@ -48,7 +48,7 @@ class RadioChannelList {
       radioFreq: "FM 95.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=sfm",
       radioApiSlug:
-        "https://cd3f-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=sfm",
+        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dsfm",
       highlightColor: { value: "#00b061" },
     },
     {
@@ -57,7 +57,7 @@ class RadioChannelList {
       radioFreq: "FM 91.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=mfm",
       radioApiSlug:
-        "https://cd3f-1-225-65-39.ngrok-free.app/https://sminiplay.imbc.com/aacplay.ashx?agent=webapp&channel=mfm",
+        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dmfm",
       highlightColor: { value: "#0fb9b1" },
     },
     {
@@ -82,9 +82,10 @@ class RadioChannelList {
       radioChannelTitle: "CBS 음악FM",
       radioType: "CBS",
       radioFreq: "FM 93.9㎒",
-      radioWebSlug: "https://www.cbs.co.kr/radio/frame/AodJwPlayer.asp#refresh",
+      radioWebSlug:
+        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3DmusicFm",
       radioHlsSlug:
-        "https://aac.cbs.co.kr/cbs939/definst/cbs939.stream/playlist.m3u8",
+        "https://m-aac.cbs.co.kr/mweb_cbs939/_definst_/cbs939.stream/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#8854d0" },
     },
@@ -92,9 +93,10 @@ class RadioChannelList {
       radioChannelTitle: "CBS 표준FM",
       radioType: "CBS",
       radioFreq: "FM 98.1㎒",
-      radioWebSlug: "https://www.cbs.co.kr/radio/frame/AodJwPlayer.asp",
+      radioWebSlug:
+        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3Dfm",
       radioHlsSlug:
-        "https://aac.cbs.co.kr/cbs981/definst/cbs981.stream/playlist.m3u8",
+        "https://m-aac.cbs.co.kr/mweb_cbs981/_definst_/cbs981.stream/playlist.m3u8",
       radioApiSlug: null,
       highlightColor: { value: "#4a3a95" },
     },
@@ -103,7 +105,7 @@ class RadioChannelList {
       radioType: "TBS",
       radioFreq: "FM 95.1㎒",
       radioWebSlug:
-        "https://cd3f-1-225-65-39.ngrok-free.app/http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
+        "https://normalize.duckdns.org/proxy/?url=http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
       radioHlsSlug:
         "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/playlist.m3u8",
 
