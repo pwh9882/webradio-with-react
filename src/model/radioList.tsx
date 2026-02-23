@@ -48,7 +48,7 @@ class RadioChannelList {
       radioFreq: "FM 95.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=sfm",
       radioApiSlug:
-        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dsfm",
+        "https://normalize.duckdns.org:8443/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dsfm",
       highlightColor: { value: "#00b061" },
     },
     {
@@ -57,7 +57,7 @@ class RadioChannelList {
       radioFreq: "FM 91.9㎒",
       radioWebSlug: "https://mini.imbc.com/webapp_v3/mini.html?channel=mfm",
       radioApiSlug:
-        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dmfm",
+        "https://normalize.duckdns.org:8443/proxy/?url=https%3A%2F%2Fsminiplay.imbc.com%2Faacplay.ashx%3Fagent%3Dwebapp%26channel%3Dmfm",
       highlightColor: { value: "#0fb9b1" },
     },
     {
@@ -83,7 +83,7 @@ class RadioChannelList {
       radioType: "CBS",
       radioFreq: "FM 93.9㎒",
       radioWebSlug:
-        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3DmusicFm",
+        "https://normalize.duckdns.org:8443/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3DmusicFm",
       radioHlsSlug:
         "https://m-aac.cbs.co.kr/mweb_cbs939/_definst_/cbs939.stream/playlist.m3u8",
       radioApiSlug: null,
@@ -94,7 +94,7 @@ class RadioChannelList {
       radioType: "CBS",
       radioFreq: "FM 98.1㎒",
       radioWebSlug:
-        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3Dfm",
+        "https://normalize.duckdns.org:8443/proxy/?url=https%3A%2F%2Fwww.cbs.co.kr%2Fschedule%3Ftype%3Dfm",
       radioHlsSlug:
         "https://m-aac.cbs.co.kr/mweb_cbs981/_definst_/cbs981.stream/playlist.m3u8",
       radioApiSlug: null,
@@ -105,7 +105,7 @@ class RadioChannelList {
       radioType: "TBS",
       radioFreq: "FM 95.1㎒",
       radioWebSlug:
-        "https://normalize.duckdns.org/proxy/?url=http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
+        "https://normalize.duckdns.org:8443/proxy/?url=http://tbs.seoul.kr/player/live.do?channelCode=CH_A",
       radioHlsSlug:
         "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/playlist.m3u8",
 

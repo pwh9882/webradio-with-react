@@ -86,7 +86,7 @@ export async function parseTitle(radio: RadioChannel): Promise<string> {
 
     case "EBS":
       response = await axios.get(
-        "https://normalize.duckdns.org/proxy/?url=https%3A%2F%2Fwww.ebs.co.kr%2Fonair%2FcururentOnair.json%3FchannelCd%3DRADIO"
+        "https://normalize.duckdns.org:8443/proxy/?url=https%3A%2F%2Fwww.ebs.co.kr%2Fonair%2FcururentOnair.json%3FchannelCd%3DRADIO"
       );
 
       if (response.status === 200) {
